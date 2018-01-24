@@ -46,6 +46,8 @@ require 'pp'
    end
 
    class ContaReceber <:: Conta
+     attr_reader :cliente
+     
      def initialize(cliente, params = {})
      	@cliente = cliente
      	super(params)
