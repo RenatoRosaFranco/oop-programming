@@ -2,30 +2,24 @@
 
   // Classe Pessoa
   // Implementação da classe Pessoa
-  class Pessoa 
-  {
-  	function __construct($nome)
-  	{ 		
+  class Pessoa {
+  	function __construct($nome){ 		
   	 $this->nome = $nome;
   	}
   }
 
   // Classe Cliente
   // Implementação da classe Cliente
-  class Cliente extends Pessoa 
-  {
-  	function __construct($nome)
-  	{
+  class Cliente extends Pessoa {
+  	function __construct($nome){
   	 parent::__construct($nome);
   	}
   }
   
   // Classe Fornecedor
   // Implementação da classe Fornecedor
-  class Fornecedor extends Pessoa 
-  {
-  	function __construct($nome)
-  	{
+  class Fornecedor extends Pessoa{
+  	function __construct($nome){
   	 parent::__construct($nome);
   	}
   }
@@ -33,39 +27,34 @@
   // Classe Conta 
   // Implementação da classe conta
   class Conta {
-  	function __construct($descricao, $valor, $data_vencimento)
-  	{
+  	function __construct($descricao, $valor, $data_vencimento) {
      $this->descricricao = $descricao;
      $this->valor = $valor;
      $this->data_vencimento = $data_vencimento;
   	}
-  	function conta()
-  	{
+  	
+    function conta(){
   	 // some code here
   	}
-  	function cancelar()
-  	{
+
+  	function cancelar(){
   	 // some code here	
   	}
   }
 
   // Classe ContaPagar 
   // Implementação da classe ContaPagar
-  class ContaPagar extends Conta
-  {
- 	function __construct($fornecedor, $descricao, $valor, $data_vencimento)
- 	{
- 	 $this->fornecedor = $fornecedor;
- 	 parent::__construct($descricao, $valor, $data_vencimento);
- 	}
+  class ContaPagar extends Conta {
+ 	 function __construct($fornecedor, $descricao, $valor, $data_vencimento){
+ 	  $this->fornecedor = $fornecedor;
+ 	  parent::__construct($descricao, $valor, $data_vencimento);
+ 	 }
   }
 
   // Classe ContaReceber 
   // Implementação classe ContaReceber
-  class ContaReceber extends Conta 
-  {
-  	function __construct($cliente, $descricao, $valor, $data_vencimento)
-  	{
+  class ContaReceber extends Conta {
+  	function __construct($cliente, $descricao, $valor, $data_vencimento) {
   	 $this->cliente = $cliente;
   	 parent::__construct($descricao, $valor, $data_vencimento);	
   	}
